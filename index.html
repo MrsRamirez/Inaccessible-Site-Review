@@ -1,0 +1,49 @@
+<!--
+A) Added lang="en" attribute to the html tag to specify the page language.
+B) Added role="button" and tabindex="0" attributes to the clickable elements to make them accessible to keyboard users and screen reader users.
+C) Added alt attribute to the image for better accessibility.
+D) Changed the underlined text "click here" to a proper anchor (<a>) element and provided an id for the link for better usability and accessibility.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Web Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>Instructions:</h2>
+    <p>Review the accessible web page below. There are 3 elements on the page where web accessibility can be improved.</p>
+    <p>Click on the page elements that you think are possibly inaccessible to all users. Continue revealing them until you’ve found all 3 elements.</p>
+    <p>Make the necessary improvements to the web page to make it more accessible.</p>
+    <hr>
+
+    <div class="header popup" onclick="popupOne()" role="button" tabindex="0">
+        <h1 style="color:whitesmoke">Hello World!</h1>
+        <span class="popuptext" id="popupOne"></span>
+    </div>
+
+    <div class="header popup" onclick="popupFour()" role="button" tabindex="0">
+        <p style="color:whitesmoke">This is my first web page, and I'd like to share with you some interesting facts about the tallest building in the world!</p>
+        <span class="popuptext" id="popupFour" style="left: 75%"></span>
+    </div>
+
+    <div class="popup" onclick="popupTwo()" role="button" tabindex="0">
+        <img src="https://codehs.com/uploads/5b3ed197413fbe4dbe7c8a01810e1337" alt="Burj Khalifa">
+        <span class="popuptext" id="popupTwo" style="bottom: 45%"></span>
+    </div>
+
+    <div class="header popup" onclick="popupFive()" role="button" tabindex="0">
+        <p style="color:whitesmoke">The tallest building in 2022 is the Burj Khalifa located in Dubai, United Arab Emirates.
+        The building is a staggering 829.8 m (2,722 ft) tall! That's just over half a mile!</p>
+        <span class="popuptext" id="popupFive" style="left: 75%"></span>
+    </div>
+
+    <div class="popup" onclick="popupThree()" role="button" tabindex="0">
+        <p>To learn more about the building, <a href="#" id="building-link">click here</a>.</p>
+        <span class="popuptext" id="popupThree"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
